@@ -17,7 +17,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Api.Banco.Database.Tarifas\Api.Banco.Database.Tarifas.csproj" />
-    <ProjectReference Include="..\Api.Banco.Datbase.Tarifas\Api.Banco.Database.Tarifas.csproj" />
   </ItemGroup>
 
 </Project>

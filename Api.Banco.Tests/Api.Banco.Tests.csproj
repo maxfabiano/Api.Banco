@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Api.Banco.ContaCorrente\Api.Banco.ContaCorrente.csproj" />
+    <ProjectReference Include="..\Api.Banco.Database.Tarifas\Api.Banco.Database.Tarifas.csproj" />
     <ProjectReference Include="..\Api.Banco.Tarifas\Api.Banco.Tarifas.csproj" />
     <ProjectReference Include="..\Api.Banco.Transferencia\Api.Banco.Transferencia.csproj" />
     <ProjectReference Include="..\Api.Banco.Usuarios\Api.Banco.Usuarios.csproj" />
