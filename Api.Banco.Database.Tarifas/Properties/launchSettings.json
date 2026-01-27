@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Api.Banco.Database.Tarifas": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}

@@ -1,0 +1,83 @@
+services:
+  db:
+    image: mysql:8.0
+    container_name: mysql_container
+    restart: always
+    command: --transaction-isolation=SERIALIZABLE
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin
+      MYSQL_DATABASE: banco_api_db
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./init:/docker-entrypoint-initdb.d
+    networks:
+      - rede_banco
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  api.tarifas:
+    container_name: api_tarifas_container
+    build:
+      context: .
+      dockerfile: Api.Banco.Tarifas/Dockerfile
+    ports:
+      - "8081:8080"
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - rede_banco
+      
+      
+
+  api.contacorrente:
+    container_name: api_contacorrente_container
+    build:
+      context: .
+      dockerfile: Api.Banco.ContaCorrente/Dockerfile
+    ports:
+      - "8082:8080"
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - rede_banco
+      
+      
+  api.transferencia:
+    container_name: api_transferencia_container
+    build:
+      context: .
+      dockerfile: Api.Banco.Transferencia/Dockerfile
+    ports:
+      - "8083:8080"
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - rede_banco
+      
+      
+  api.usuarios:
+    container_name: api_usuarios_container
+    build:
+      context: .
+      dockerfile: Api.Banco.Usuarios/Dockerfile
+    ports:
+      - "8084:8080"
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - rede_banco
+      
+
+networks:
+  rede_banco:
+    driver: bridge

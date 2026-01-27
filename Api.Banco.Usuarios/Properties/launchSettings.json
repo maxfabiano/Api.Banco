@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Api.Banco.Usuarios": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}

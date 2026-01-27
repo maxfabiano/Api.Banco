@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Api.Banco.Transferencia": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}

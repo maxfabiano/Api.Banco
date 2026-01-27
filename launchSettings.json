@@ -1,0 +1,22 @@
+{
+  "profiles": {
+    "Docker Compose": {
+      "commandName": "DockerCompose",
+      "commandVersion": "1.0",
+      "composeLaunchAction": "LaunchBrowser",
+      "composeLaunchServiceName": "api.banco",
+      "serviceActions": {
+        "api.banco": "StartDebugging",
+        "db_mysql": "StartWithoutDebugging"
+      }
+    },
+    "Docker Composer Many": {
+      "commandName": "DockerCompose",
+      "commandVersion": "1.0",
+      "serviceActions": {
+        "api.banco": "StartDebugging",
+        "db_mysql": "StartWithoutDebugging"
+      }
+    }
+  }
+}
