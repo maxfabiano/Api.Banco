@@ -24,6 +24,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Banco.Usuarios", "Api.B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Banco.Database.Usuarios", "Api.Banco.Database.Usuarios\Api.Banco.Database.Usuarios.csproj", "{B413E550-5C50-4D8A-8DAC-E9B6493C61B6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Banco.Tests", "Api.Banco.Tests\Api.Banco.Tests.csproj", "{CDE9FC81-4BB0-418A-97CA-D313CD2339B0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -62,6 +64,10 @@ Global
 		{B413E550-5C50-4D8A-8DAC-E9B6493C61B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B413E550-5C50-4D8A-8DAC-E9B6493C61B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B413E550-5C50-4D8A-8DAC-E9B6493C61B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDE9FC81-4BB0-418A-97CA-D313CD2339B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDE9FC81-4BB0-418A-97CA-D313CD2339B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDE9FC81-4BB0-418A-97CA-D313CD2339B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDE9FC81-4BB0-418A-97CA-D313CD2339B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
