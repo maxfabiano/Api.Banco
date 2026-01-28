@@ -47,7 +47,12 @@ namespace Api.Banco.ContaCorrente.Controllers
             {
                 try
                 {
-                    var command = new AbrirContaCommand(request.IdUsuarioPrincipal);
+                    var idUsuario = int.Parse(User.FindFirst("IdUsuario")?.Value);
+                    if (request.IdUsuarioPrincipal != null)
+                    {
+                        idUsuario = request.IdUsuarioPrincipal;
+                    }
+                    var command = new AbrirContaCommand(idUsuario);
                     var idGerado = await _mediator.Send(command);
 
                     return Ok(new
