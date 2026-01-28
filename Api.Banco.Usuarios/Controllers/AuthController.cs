@@ -64,7 +64,7 @@ namespace Api.Banco.Usuarios.Controllers
                 return Unauthorized(new ErrorResponse("Credenciais inválidas", "USER_UNAUTHORIZED"));
 
             var token = GenerateJwtToken(user);
-            return Ok(new LoginResponse(token.Value, token.Expiration, user.Nome));
+            return Ok(new LoginResponse(token.Value, token.Expiration, user.IdUsuario));
         }
 
         private (string Value, DateTime Expiration) GenerateJwtToken(UsuarioTb user)

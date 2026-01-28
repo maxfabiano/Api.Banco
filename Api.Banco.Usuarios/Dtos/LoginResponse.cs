@@ -6,5 +6,5 @@ using System.Threading.Tasks;
 
 namespace Api.Banco.Usuarios.Dtos
 {
-    public record LoginResponse(string Token, DateTime Expiration, string Nome);
+    public record LoginResponse(string Token, DateTime Expiration, int IdUsuario);
 }
